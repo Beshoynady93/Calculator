@@ -1,0 +1,82 @@
+.calc-keypad-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: var(--size-400);
+  padding: var(--size-400);
+  background-color: var(--keypad-bg);
+  border-radius: var(--size-200);
+
+  font-weight: var(--fw-700);
+
+  /* font-size: 1.5rem; */
+}
+
+.calc-keypad-container button {
+  cursor: pointer;
+  border: none;
+  border-radius: var(--size-200);
+
+  padding: var(--size-100) var(--size-600);
+}
+
+.calc-keypad-button {
+  padding: var(--size-200) var(--size-300);
+
+  color: var(--key-txt);
+  box-shadow: 0 3px var(--key-shadow);
+  background-color: var(--key-bg);
+  transition: background-color 500ms ease;
+}
+
+.magenta .equal-key {
+  color: var(--dark-blue);
+}
+
+.calc-keypad-button:active,
+.calc-keypad-reset-key:active,
+.calc-keypad-del-key:active,
+.calc-keypad-equal-key:active {
+  transform: translateY(2px);
+}
+
+.calc-keypad-button:hover,
+.calc-keypad-button:focus-visible {
+  background-color: var(--key-bg-hover);
+}
+
+.calc-keypad-reset-key {
+  grid-column: span 2;
+  background-color: var(--res-del-key-bg);
+  box-shadow: 0 3px var(--res-del-key-shadow);
+  transition: background-color 300ms ease;
+  text-transform: uppercase;
+}
+.calc-keypad-reset-key:hover,
+.calc-keypad-reset-key:focus-visible {
+  background-color: var(--res-del-key-bg-hover);
+}
+
+.calc-keypad-del-key {
+  background-color: var(--res-del-key-bg);
+  box-shadow: 0 3px var(--res-del-key-shadow);
+  transition: background-color 300ms ease;
+  text-transform: uppercase;
+}
+
+.calc-keypad-del-key:hover,
+.calc-keypad-del-key:focus-visible {
+  background-color: var(--res-del-key-bg-hover);
+}
+
+.calc-keypad-equal-key {
+  grid-column: span 2;
+  background-color: var(--equal-key-bg-toggle);
+  box-shadow: 0 3px var(--equal-key-shadow);
+  transition: background-color 300ms ease;
+}
+
+.calc-keypad-equal-key:hover,
+.calc-keypad-equal-key:focus-visible {
+  background-color: var(--equal-key-bg-hover);
+}
